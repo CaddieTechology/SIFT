@@ -1,30 +1,30 @@
-# Smart Imagery Framing and Truthing System(SIFTS)
-SIFTS is an rapid accurate fine-grained image labelling and annotation system to assist annotators to identify abnormality, corresponding boundaries, and other abnormalities on large-amount of chest x-ray images to train and test machine learning and deep learning artificial intelligence. 
+# Smart Imagery Framing and Truthing(SIFT) System
+SIFT is an rapid accurate fine-grained image labelling and annotation system to assist annotators to identify abnormality, corresponding boundaries, and other abnormalities on large-amount of chest x-ray images to train and test machine learning and deep learning artificial intelligence. 
 ## A.	Background
 Development of machine learning and deep learning (ML/DL) for medical application requires a very large amount of high-quality data (radiographs, genomics, pathological images, etc.) to train and test in order to reach very high accuracy and robustness.  High-quality data requires (1) a gold standard to confirm the cases (e.g., biopsy to confirm the cancer on chest x-ray and CT, etc.); (2) accurate location and delineation of lesion; (3) other possible lesions located on the image; and (4) large amount of data. Accurate and consistent annotation require the participation of annotators with specific domain knowledge operating annotation tool and many times are very time consuming, tedious, inefficient, and lack of accuracy.  Although many image-based annotation tools have been developed for radiological images, it still cannot meet such demand because annotators need to determine the type of diseases, use of pointing device to follow, draw, and edit the boundaries of diseases, and debate type of disease.  Sometimes, use of these annotation tools may deter the annotator to perform such task.  Furthermore, consistency of annotation remains challenge even for identical annotator (intra-observer variance) and different annotators may use different medical terminologies for identical diseases (inter-observer variance).  Smart Imagery Framing and Truthing (SIFT) System is developed in order to attack the above issues such that it can benefit for the fast and accurate development of ML/DL for medical applications. 
-## B.	Purpose of SIFTS:
-SIFTS is intended to assist annotators to accurately and rapidly identify the location of abnormality, its boundary coordinates, confidence level, possible recommended types of abnormality, and other co-located abnormalities on large-amount of chest x-ray (CXR) images such that these information can be used to generate training and testing sets to develop robust and accurate artificial intelligence technologies.
-SIFTS is not intended to assist physician to perform any clinical function such as screening, diagnosis, triage, etc.   
+## B.	Purpose of SIFT
+SIFT is intended to assist annotators to accurately and rapidly identify the location of abnormality, its boundary coordinates, confidence level, possible recommended types of abnormality, and other co-located abnormalities on large-amount of chest x-ray (CXR) images such that these information can be used to generate training and testing sets to develop robust and accurate artificial intelligence technologies.
+SIFT is not intended to assist physician to perform any clinical function such as screening, diagnosis, triage, etc.   
 ## C.	Technologies:
-SIFTS is based on Multi-task, Optimal-recommendation, and Max-predictive Classification and Segmentation (MOM ClasSeg) technologies to detect and delineate 66 different abnormal regions of interest (ROI) on chest x-ray image, provide confidence score for detected ROI, and various recommendation of abnormality for each ROI. The MOM ClasSeg System integrating Mask R-CNN and Decision Fusion Network is developed on a training dataset of over 300,000 adult chest x-ray, which contains over 240,000 confirmed abnormal images with over 300,000 confirmed ROIs corresponding to 66 different abnormalities and over 67,000 normal (i.e., “no finding”) images.
+SIFT is based on Multi-task, Optimal-recommendation, and Max-predictive Classification and Segmentation (MOM ClasSeg) technologies to detect and delineate 66 different abnormal regions of interest (ROI) on chest x-ray image, provide confidence score for detected ROI, and various recommendation of abnormality for each ROI. The MOM ClasSeg System integrating Mask R-CNN and Decision Fusion Network is developed on a training dataset of over 300,000 adult chest x-ray, which contains over 240,000 confirmed abnormal images with over 300,000 confirmed ROIs corresponding to 66 different abnormalities and over 67,000 normal (i.e., “no finding”) images.
  
-## D.	Features of SIFTS
+## D.	Features of SIFT
 
 #### 1.	Providing Initial Type of Abnormalities
-a.	SIFTS can automatically detect and classify ROI into specific type of abnormality (“Predicted Disease”).  Annotator just clicks to confirm or reject its type.  
-b.	SIFTS can automatically predict 66 different types of abnormalities.  
-c.	SIFTS can automatically recommend several different abnormalities if the score of originally predicted abnormality is not high enough.  Annotator just clicks to select the recommended type.
+a.	SIFT can automatically detect and classify ROI into specific type of abnormality (“Predicted Disease”).  Annotator just clicks to confirm or reject its type.  
+b.	SIFT can automatically predict 66 different types of abnormalities.  
+c.	SIFT can automatically recommend several different abnormalities if the score of originally predicted abnormality is not high enough.  Annotator just clicks to select the recommended type.
 #### 2.	Fully Compliance and Uniqueness of Abnormalities
-a.	Among these unique abnormalities predicted by SIFTS, 90% of disease lexicons comply with Medical Dictionary for Regulatory Activities (MedDRA) UMLS CUI coding and rest of 10% comply with Radiopaedia (international collaborative radiology educational resource from Wikipedia).
+a.	Among these unique abnormalities predicted by SIFT, 90% of disease lexicons comply with Medical Dictionary for Regulatory Activities (MedDRA) UMLS CUI coding and rest of 10% comply with Radiopaedia (international collaborative radiology educational resource from Wikipedia).
 #### 3.	Providing Coordinates of Boundaries for ROI
-a.	SIFTS can automatically draw the boundary of ROI to predict the location coordinates.  
+a.	SIFT can automatically draw the boundary of ROI to predict the location coordinates.  
 b.	Annotators can accept or edit the boundary using SIFT graphic user interface (GUI).
 #### 4.	Providing Confidence Score for Each AI-specified ROI
 a.	SIFT can automatically generate confidence score of ROI for each predicted disease.
 #### 5.	Batch Processing of Large Amount of Images   
-a.	SIFTS can process large-amount of CXR to generate initial location and boundaries without any human intervention.
+a.	SIFT can process large-amount of CXR to generate initial location and boundaries without any human intervention.
 #### 6.	Providing Other Possible Abnormalities, Location, and Boundaries
-#### 7.	Allowing Annotator to use SIFTS GUI to determine types of abnormality and draw the boundaries of specific ROI on any place of image.
+#### 7.	Allowing Annotator to use SIFT GUI to determine types of abnormality and draw the boundaries of specific ROI on any place of image.
 #### 8.	Allowing to store annotations and train train models
 a.  Allowing Annotator to store any type of abnormality, corresponding boundary coordinates, confidence score, and recommended types, if any, in an editable excel spreadsheet file.   
 b.	AI developers can use these files along with images to train their deep learning artificial intelligence technologies.
